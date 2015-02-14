@@ -6,8 +6,8 @@ var io=require('socket.io').listen(http);
 app.get('/', function(req, res){
   res.sendFile(__dirname +'/index.html');
 });
-
-http.listen(8080, function(){
+var port = process.env.PORT || 8080;
+http.listen(port, function(){
   console.log('listening on *:3000');
 });
 
