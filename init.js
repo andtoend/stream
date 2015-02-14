@@ -29,7 +29,7 @@ var twit = new twitter({
 twit.stream('statuses/filter',{track:'node'},function(stream) {
 	
 	stream.on('data',function (data) {
-		console.log(data);
+		
 		io.emit('tweet',{
 			user: data.user.screen_name,
 			text: data.text,
