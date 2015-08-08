@@ -26,7 +26,7 @@ var twit = new twitter({
 });	
 
 
-twit.stream('statuses/filter',{track:'node'},function(stream) {
+twit.stream('statuses/filter',{track:'programador',language:'es'},function(stream) {
 	
 	stream.on('data',function (data) {
 		
